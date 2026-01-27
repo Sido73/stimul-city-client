@@ -1,0 +1,41 @@
+.top-bar {
+  background-color: #1A237E;
+  padding: 10px 0;
+  color: white;
+}
+
+.top-bar-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact-info {
+  display: flex;
+  gap: 30px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: white;
+}
+
+.icon-placeholder {
+  font-size: 16px;
+}
+
+@media (max-width: 480px) {
+  .top-bar-content {
+    justify-content: center;
+  }
+
+  .contact-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
