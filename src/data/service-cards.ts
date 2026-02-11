@@ -1,19 +1,28 @@
-import type { ServiceCard } from "../types/ServiceCard.type";
+import type { ServiceCardType } from '../types/ServiceCard.type';
 
-export const SERVICE_CARDS: ServiceCard[] = [
-  {
-    id: "private-property",
-    title: "ПРИВАТИЗАЦІЯ ОБ'ЄКТІВ",
-    subTitle: "Оподаткування у вибір майно",
-  },
+export const serviceCards: ServiceCardType[] = [
   {
     id: "commercial-property",
     title: "КОМЕРЦІЙНА НЕРУХОМІСТЬ",
     subTitle: "Офіси, склади, ТРЦ",
+    description: "Продаж та оренда комерційних приміщень",
+    price: "5000 грн",
+    icon: "🏢"
+  },
+  {
+    id: "private-property",
+    title: "ПРИВАТИЗАЦІЯ ОБ'ЄКТІВ",
+    subTitle: "Оподаткування у вибір майно",
+    description: "Юридичний супровід приватизації",
+    price: "3000 грн",
+    icon: "⚖️"
   },
   {
     id: "investment-solutions",
     title: "ІНВЕСТИЦІЙНІ РІШЕННЯ",
     subTitle: "Вигідні інвестиції у Запоріжжі",
-  },
+    description: "Консультації щодо інвестицій в нерухомість",
+    price: "7000 грн",
+    icon: "📈"
+  }
 ];

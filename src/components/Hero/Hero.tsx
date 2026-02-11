@@ -1,24 +1,36 @@
-import './Hero.css'
+import './Hero.css';
 
-interface HeroProps {
-  onScrollTo: (id: string) => void
-}
+const Hero = () => {
+  const handleScrollToProjects = () => {
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
-export default function Hero({ onScrollTo }: HeroProps) {
+  const handleScrollToServices = () => {
+    const servicesSection = document.getElementById('services');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
-    <section className="hero" id="home">
-      <div className="hero-overlay"></div>
-      <div className="hero-background">
-        <img src="/hero-bg.jpg" alt="Background" className="hero-bg-image" />
-      </div>
+    <section className="hero">
       <div className="hero-content">
-        <h1 className="hero-title">ТОВ "СТИМУЛ-СІТІ"</h1>
-        <p className="hero-subtitle">Інвестиції в нерухомість у Запоріжжі.</p>
+        <h1>ТОВ "СТИМУЛ-СІТІ"</h1>
+        <p>Інвестиції в нерухомість у Запоріжжі</p>
         <div className="hero-buttons">
-          <button className="btn btn-orange" onClick={() => onScrollTo('projects')}>НАШІ ПРОЕКТИ</button>
-          <button className="btn btn-blue" onClick={() => onScrollTo('about')}>ДІЗНАТИСЯ ВІЛЬНЕ</button>
+          <button className="btn-primary" onClick={handleScrollToProjects}>
+            НАШІ ПРОЕКТИ
+          </button>
+          <button className="btn-secondary" onClick={handleScrollToServices}>
+            ДІЗНАТИСЯ БІЛЬШЕ
+          </button>
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
+
+export default Hero;

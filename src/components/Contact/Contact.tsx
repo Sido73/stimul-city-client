@@ -39,7 +39,7 @@ export default function Contact() {
           <div className="contact-details">
             <div className="contact-detail">
               <span className="icon-placeholder">📍</span>
-              <span>vul. Lewka Lukïanenka, 27, Zaporizhia</span>
+              <span>вул. Гагаріна, 10, Запоріжжя</span>
             </div>
             <div className="contact-detail">
               <span className="icon-placeholder">📞</span>
